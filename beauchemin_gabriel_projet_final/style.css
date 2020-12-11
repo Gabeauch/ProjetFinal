@@ -1,0 +1,472 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	background-image: url("media/cockpit.png");
+	background-position: center;
+}
+
+.videoPlayer{
+	display:none;
+	opacity: 0.8;
+	position: absolute;
+	width: 40%;
+	height: auto;
+	background-color: rgba(66, 245, 197, 0.5);
+	border: 2px solid #a8f7e8;
+	top: 40%;
+	left: 50%;
+	padding: 2vw;
+	transform: translate(-50%, -50%) scale(1, 1);
+}
+
+.btnPlay{
+	border: none;
+	outline:none;
+	background: transparent;
+	display:none;
+	position: absolute;
+	height: 12vh;
+	width: 12vh ;
+	bottom: 8%;
+	left:50%;
+	opacity: 0.6;
+	transform: translate(-50%, -50%) scale(1, 1);
+	background-image: url("media/btnPlay.png");
+	background-size: 12vh 12vh;
+	Transition-timing-function: ease-in-out;
+	transition-duration: 0.5s;
+}
+
+.btnPlay:hover{
+	opacity: 1;
+	background-image: url("media/btnPlayBright.png"); 
+	Transition-timing-function: ease-in-out;
+	transition-duration: 0.5s;
+}
+
+.btnPlay:focus{
+	outline:none;
+	opacity: 1;
+	background-image: url("media/btnPlayFocus.png"); 
+	Transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+}
+
+.btnPause{
+	border: none;
+	outline:none;
+	background: transparent;
+	display: none;
+	position: absolute;
+	height: 12vh;
+	width: 12vh ;
+	bottom: 8%;
+	left:50%;
+	opacity: 0.6;
+	transform: translate(-50%, -50%) scale(1, 1);
+	background-size: 12vh 12vh;
+	Transition-timing-function: ease-in-out;
+	transition-duration: 0.5s;
+	background-image: url("media/btnPause.png");
+}
+
+.btnPause:hover{
+	opacity: 1;
+	Transition-timing-function: ease-in-out;
+	transition-duration: 0.5s;
+	background-image: url("media/btnPauseBright.png");
+}
+
+.btnPause:focus{
+	opacity: 1;
+	Transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+	background-image: url("media/btnPauseFocus.png");
+}
+
+.btnPleinEcran{
+	border: none;
+	outline:none;
+	background: transparent;
+	display: none;
+	position: absolute;
+	height: 6vh;
+	width: 9vh ;
+	bottom: 8%;
+	left:30%;
+	opacity: 0.6;
+	transform: translate(-50%, -50%) scale(1, 1);
+	background-size: 9vh 6vh;
+	Transition-timing-function: ease-in-out;
+	transition-duration: 0.5s;
+	background-image: url("media/btnPleinEcran.png");
+}
+
+.btnPleinEcran:hover{
+	opacity: 1;
+	Transition-timing-function: ease-in-out;
+	transition-duration: 0.5s;
+	background-image: url("media/btnPleinEcranBright.png");
+}
+
+.btnPleinEcran:focus{
+	opacity: 1;
+	Transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+	background-image: url("media/btnPleinEcranFocus.png");
+}
+
+.btnStop{
+	border: none;
+	outline:none;
+	background: transparent;
+	display: none;
+	position: absolute;
+	height: 6vh;
+	width: 6vh ;
+	bottom: 15%;
+	left:20%;
+	opacity: 0.6;
+	transform: translate(-50%, -50%) scale(1, 1);
+	background-size:6vh 6vh;
+	Transition-timing-function: ease-in-out;
+	transition-duration: 0.5s;
+	background-image: url("media/btnStop.png");
+}
+
+.btnStop:hover{
+	opacity: 1;
+	Transition-timing-function: ease-in-out;
+	transition-duration: 0.5s;
+	background-image: url("media/btnStopBright.png");
+}
+
+.btnStop:focus{
+	opacity: 1;
+	Transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+	background-image: url("media/btnStopFocus.png");
+}
+
+.btnSonPlus{
+	border: none;
+	outline:none;
+	background: transparent;
+	display: none;
+	position: absolute;
+	height: 8vh;
+	width: 8vh ;
+	bottom: 15%;
+	left: 80%;
+	opacity: 0.6;
+	transform: translate(-50%, -50%) scale(1, 1);
+	background-size:8vh 8vh;
+	Transition-timing-function: ease-in-out;
+	transition-duration: 0.5s;
+	background-image: url("media/btnSonPlus.png");
+}
+
+.btnSonPlus:hover{
+	opacity: 1;
+	Transition-timing-function: ease-in-out;
+	transition-duration: 0.5s;
+	background-image: url("media/btnSonPlusBright.png");
+}
+
+.btnSonPlus:focus{
+	opacity: 1;
+	Transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+	background-image: url("media/btnSonPlusFocus.png");
+}
+
+.btnSonMoins{
+	border: none;
+	outline:none;
+	background: transparent;
+	display: none;
+	position: absolute;
+	height: 8vh;
+	width: 8vh ;
+	bottom: 8%;
+	left:70%;
+	opacity: 0.6;
+	transform: translate(-50%, -50%) scale(1, 1);
+	background-size:8vh 8vh;
+	Transition-timing-function: ease-in-out;
+	transition-duration: 0.5s;
+	background-image: url("media/btnSonMoins.png");
+}
+
+.btnSonMoins:hover{
+	opacity: 1;
+	Transition-timing-function: ease-in-out;
+	transition-duration: 0.5s;
+	background-image: url("media/btnSonMoinsBright.png");
+}
+
+.btnSonMoins:focus{
+	opacity: 1;
+	Transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+	background-image: url("media/btnSonMoinsFocus.png");
+}
+
+.btnMail{
+	border: none;
+	outline:none;
+	background: transparent;
+	display: none;
+	position: absolute;
+	height: 6vh;
+	width: 8vh ;
+	top: 5%;
+	left:90%;
+	opacity: 0.6;
+	transform: translate(-50%, -50%) scale(1, 1);
+	background-size:8vh 6vh;
+	Transition-timing-function: ease-in-out;
+	transition-duration: 0.5s;
+	background-image: url("media/btnMail.png");
+}
+
+.btnMail:hover{
+	opacity: 1;
+	Transition-timing-function: ease-in-out;
+	transition-duration: 0.5s;
+	background-image: url("media/btnMailBright.png");
+}
+
+.btnMail:focus{
+	opacity: 1;
+	Transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+	background-image: url("media/btnMailFocus.png");
+}
+
+.btnFermerInterface{
+	border: none;
+	outline:none;
+	background: transparent;
+	display: none;
+	position: absolute;
+	height: 6vh;
+	width: 6vh ;
+	top: 20%;
+	left:80%;
+	opacity: 0.6;
+	transform: translate(-50%, -50%) scale(1, 1);
+	background-size:6vh 6vh;
+	Transition-timing-function: ease-in-out;
+	transition-duration: 0.5s;
+	background-image: url("media/btnFermerInterface.png");
+}
+
+.btnFermerInterface:hover{
+	opacity: 1;
+	Transition-timing-function: ease-in-out;
+	transition-duration: 0.5s;
+	background-image: url("media/btnFermerInterfaceBright.png");
+}
+
+.btnFermerInterface:focus{
+	opacity: 1;
+	Transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+	background-image: url("media/btnFermerInterfaceFocus.png");
+}
+
+.video {
+	position: relative;
+	-webkit-object-fit: cover;
+    object-fit: cover;
+	width: 100%;
+}
+
+.video:focus{
+	outline: none;
+}
+
+.progres {
+  position: relative;
+  width: 100%;
+  padding-bottom: 4vmin;
+}
+
+.barre {
+  border: 2px solid #a8f7e8;
+  position: absolute;
+  width: 100%;
+  height: 4vmin;
+  background: linear-gradient(to right, orange, yellow, green, cyan, blue, violet);
+  transform-origin: 0 50%;
+  transition: transform 0.2s linear;
+}
+
+input {
+  position: absolute;
+  width: 100%;
+  height: 4vmin;
+  opacity: 0;
+  transition: transform 0.2s linear;
+}
+
+.fondNoir{
+	position: absolute;
+	background-color: black;
+	width: 100%;
+	height: 100%;
+}
+
+.coreStartup{ 
+	border: 5px solid white;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 500px;
+	height: 287px;
+	background-image: url("media/coreStartup.png");
+	
+}
+
+.notification{
+	display:none;
+	position: absolute;
+	top: 5%;
+	left: 87%;
+	transform: translate(-50%, -50%);
+	width: 4vh;
+	height: 4vh;
+	background-size:4vh 4vh;
+	background-image: url("media/mailNotice.png");
+}
+
+.gif{
+	animation: animate 2s linear;
+	animation-timing-function: steps(49);
+}
+
+@keyframes animate {
+  from { background-position: 0 0; }
+  to { background-position: -24500px 0; }
+}
+
+.projection{
+	animation: apparition 0.7s ease-out;
+}
+
+@keyframes apparition{
+	from {transform: translate(-50%, -50%) scale(2, 0); opacity: 0;}
+	to {transform: translate(-50%, -50%) scale(1, 1); opacity: 0.8;}
+}
+
+.screenProjection{
+	animation: screen 3s ease-in-out infinite;
+	animation-direction: alternate-reverse;
+}
+
+@keyframes screen{
+	from {transform: translate(-50%, -30%) scale(1.2, 1.2);}
+	to {transform: translateY(-50%, -50%) scale(1, 1);}
+}
+
+.screenProjection2{
+	animation: screen2 3s ease-in-out infinite;
+	animation-direction: alternate-reverse;
+}
+
+@keyframes screen2{
+	from {transform: translate(-50%, -45%) scale(1.05, 1.05);}
+	to {transform: translateY(-50%, -50%) scale(1, 1);}
+}
+
+.screenProjection3{
+	animation: screen3 1.3s ease-in-out infinite;
+	animation-direction: alternate-reverse;
+}
+
+@keyframes screen3{
+	from {transform: translate(-50%, -25%);}
+	to {transform: translateY(-50%, -50%);}
+}
+
+.fermetureInterface{
+	animation: interface 0.75s ease-in;
+}
+
+@keyframes interface{
+	0% {transform: scale(1, 1); opacity: 0.8;}
+	50% {transform: scale(10, 0.25); opacity: 0.8;}
+	100% {transform: scale(0, 0); opacity: 0;}
+}
+
+.mailAnim{
+	animation: mailApparition 1.5s linear;
+}
+
+@keyframes mailApparition{
+	0% {top: 50%; left:50%; transform: translate(-50%, -50%) scale(0, 0); opacity: 0;}
+	25% {top: 50%; left:50%; transform: translate(-50%, -50%) scale(10, 10); opacity: 1;}
+	75% {top: 50%; left:50%; transform: translate(-50%, -50%) scale(1, 1); opacity: 1;}
+	100% {top: 5%; left:90%; transform: translate(-50%, -50%) scale(1, 1); opacity: 0.6;}
+}
+
+.mailQuit{
+	animation: mailQuit 0.5s ease-in;
+}
+
+@keyframes mailQuit{
+	0% {transform: translate(-50%, -50%) scale(1, 1); opacity: 1;}
+	50% { transform: translate(-50%, -50%) scale(1.5, 1.5); opacity: 1;}
+	100% { transform: translate(-50%, -50%) scale(0, 0); opacity: 0;}
+}
+
+.notifAnim{
+	animation: notifAnim 1s ease-in-out infinite;
+	animation-direction: alternate-reverse;
+}
+
+@keyframes notifAnim{
+	from {top: 5%; left:87%; transform: translate(-50%, -50%) rotate(0); }
+	to {top: 3%; left:87%; transform: translate(-50%, -50%) rotate(-10deg); }
+}
+
+
+.btnStart{
+	bottom: 0;
+	left: 50%;
+	position:absolute;
+	transform:translate(-50%, 0);
+	background-image: url("media/coreNoShine.png");
+	width:650px;
+	height:434px;
+	Transition-timing-function: ease-in-out;
+	transition-duration: 1s;
+}
+
+.btnStart:hover{
+	Transition-timing-function: ease-in-out;
+	transition-duration: 1s;
+	background-image: url("media/coreShine.png");
+}
+
+.startPage{
+	position: absolute;
+	width: 100%;
+	height:100%;
+	
+}
+
+.interface{
+	display: none;
+}
+
+.displayRight {display: block;}
